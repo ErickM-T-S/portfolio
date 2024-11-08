@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfólio.projetos</title>
+</head>
+<body>
+    <header> 
+        <a href="home.html" class="caminho">HOME</a>
+        <a href="habilidades.html" class="caminho">HABILIDADES</a>
+        <a href="projetos.html" class="caminho">PROJETOS</a> 
+    </header>
+    <main class="projetos">
+        <section class="apresentação-texto">
+    <h1> Projetos</h1>
+    <p class= "apresentação-projetos"></p>
+    </section>
+    <div class="imagem-projetos"></div>
+    <img src="imagens/horario.png" alt="imagem projeto horario do dia">
+    <img src="imagens/contador.png" alt="imagem projeto contador">
+    <img src="imagens/embreve.jpg" alt="em breve">
+    </main>
+    <footer>
+        
+    </footer>  
+
+    <script>
+
+var texto2 =  "estou trabalhando em um projeto de um jogo proprio chamado Kursed Kingdom e fazendo alguns mini projetos em html, css e javaScript ";
+
+var conteudoProjeto= document.querySelector(".apresentação-projetos");
+var contadorDeLetras = 0;
+var atraso = 50;
+
+function escreverTextoProjeto(){
+    if(contadorDeLetras < texto2.length){
+    conteudoProjeto.textContent += texto2.charAt(contadorDeLetras);
+    contadorDeLetras++;
+    setTimeout(escreverTextoProjeto, atraso);
+    }
+}
+escreverTextoProjeto();
+</script>
+    <link rel="stylesheet" href="Style.css">
+
+</body>
+</html>
